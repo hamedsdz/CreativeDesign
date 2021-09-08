@@ -1,0 +1,71 @@
+/* 
+  Roboto -> Google Fonts
+      Light => 300
+      Regular => 400
+      Bold => 700 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #3c3c3c;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  margin-top: 30px;
+}
+
+label {
+  cursor: pointer;
+  font-size: 26px;
+  background-color: #f9f9f9;
+  height: 40px;
+  width: 40px;
+  color: #333;
+  padding: 5px;
+  transition: 0.4s ease;
+  border-radius: 6px 0px 0px 6px;
+}
+
+input {
+  background-color: #f9f9f9;
+  font-size: 20px;
+  height: 40px;
+  border: 0;
+  padding: 5px;
+  width: 250px;
+  transition: 0.4s ease;
+  border-radius: 0px 6px 6px 0px;
+}
+
+label:active,
+input:focus {
+  outline: none;
+}
+
+.hide label {
+  transition-delay: 0.25s;
+  border-radius: 6px;
+}
+
+.container.hide input {
+  width: 0;
+  padding: 0;
+  transition: 0.4s ease;
+}
