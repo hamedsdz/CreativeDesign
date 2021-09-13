@@ -1,0 +1,125 @@
+/* 
+  Roboto -> Google Fonts
+      Light => 300
+      Regular => 400
+      Bold => 700 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --water-color: #9ab3f5;
+  --empty-glass: #eee;
+  --glass-border-color: #00587a;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #7579e7;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 10px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+.main-cup {
+  width: 200px;
+  height: 400px;
+  background-color: var(--empty-glass);
+  border-radius: 0 0 60px 60px;
+  border: 5px solid var(--glass-border-color);
+  margin: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  color: #3c3c3c;
+}
+
+.main-cup .remain {
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #3c3c3c;
+  line-height: 28px;
+  font-weight: bold;
+  transition: height 0.6s ease;
+}
+
+.main-cup .water {
+  position: relative;
+  height: 0%;
+  width: 100%;
+  background-color: var(--water-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #3c3c3c;
+  font-size: 45px;
+  font-weight: bold;
+  transition: height 0.6s ease;
+}
+
+.cups {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  color: #3c3c3c;
+  margin: 20px auto;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cups .cup {
+  height: 125px;
+  width: 80px;
+  background-color: #fff;
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--empty-glass);
+  border-radius: 0 0 12px 12px;
+  border: 2px solid var(--glass-border-color);
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.cups .cup.active {
+  transition: 0.6s ease;
+  background-color: var(--water-color);
+}
